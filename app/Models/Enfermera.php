@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Enfermera extends Model
 {
     use HasFactory;
-}
+
+    public function Diagnostico()
+    {
+        return $this->hasOne('App\Models\Diagnostico');
+    }}

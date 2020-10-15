@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sintomas extends Model
+class Sintoma extends Model
 {
     use HasFactory;
+    public function Pacientes()
+    {
+   return $this->belongsToMany('App\Models\Paciente', 'pacientesxsintomas');
+}
 }
